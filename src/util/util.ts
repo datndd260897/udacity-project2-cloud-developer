@@ -13,6 +13,7 @@ export async function filterImageFromURL(inputURL: string): Promise<string> {
   return new Promise(async (resolve, reject) => {
     try {
       // const photo = await Jimp.read(inputURL);
+      // fix MIME buffer
       const photo = await axios({
         method: "get",
         url: inputURL,
